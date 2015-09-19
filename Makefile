@@ -53,6 +53,15 @@ INCLUDES += -I$(CURDIR)/modules/location
 LINKFLAGS += -lgps
 # **END LOCATION MODULE***
 
+# **VANGUARD RADIO MODULE**
+# comment this section out if not using
+EXTERNAL_MODULE_DIRS += $(CURDIR)/modules/radio
+
+USEMODULE += radio
+INCLUDES += -I$(CURDIR)/modules/radio
+
+# **END LOCATION MODULE***
+
 # Specify custom dependencies for your application here ...
 # APPDEPS = app_data.h config.h
 
