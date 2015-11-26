@@ -1,8 +1,11 @@
 APPLICATION = kubos-core
 
 # If no BOARD is found in the environment, use this default:
-BOARD ?= native
-BOARDTYPE ?= beaglebone
+ifeq (,$(BOARD))
+BOARD := native
+BOARDTYPE := beaglebone
+endif
+
 DEBUG ?= 0
 
 # This has to be the absolute path to the RIOT base directory:
